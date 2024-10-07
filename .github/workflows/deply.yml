@@ -25,11 +25,11 @@ jobs:
         npm run build
 
     - name: 📂 Upload to cPanel
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4  # Use the correct action for FTP/SFTP deploy
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.GIT_CPANEL_REACT_SERVER }}
         username: ${{ secrets.GIT_CPANEL_REACT_USER }}
         password: ${{ secrets.GIT_CPANEL_REACT_PWD }}
-        protocol: ${{ secrets.GIT_CPANEL_REACT_PROTOCOL }}  # e.g., 'ftp' or 'sftp'
-        local-dir: ./build/   # Directory where your React build files are located
-        server-dir: /public_html/  # Directory on the cPanel server where you want to upload the files
+        protocol: ${{ secrets.GIT_CPANEL_REACT_PROTOCOL }}
+        local-dir: ./build/
+        server-dir: /public_html/
