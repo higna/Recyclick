@@ -13,7 +13,7 @@ const Contact = () => {
         e.preventDefault(); // Prevent default form submission
         // You can add your form submission logic here
         console.log('Form submitted:', { name, email, message });
-        
+
         // Reset the form fields after submission
         setName('');
         setEmail('');
@@ -62,8 +62,17 @@ const Contact = () => {
                     Send Message
                 </button>
             </form>
+            <div className="justify-center">
+                <p>Follow us on social media!</p>
+            </div>
+            <div className="flex justify-center space-x-4">
+                <a href="#" className="hover:underline">Facebook</a>
+                <a href="#" className="hover:underline">Twitter</a>
+                <a href="#" className="hover:underline">Instagram</a>
+            </div>
             <Footer />
         </div>
+
     );
 };
 
